@@ -1,0 +1,16 @@
+inherits = "ayu_dark"
+
+special = "yellow"
+
+"ui.background" = {}
+
+"ui.linenr" = "gray"
+"ui.linenr.selected" = "yellow"
+
+"ui.selection" = { bg = "dark_gray" }
+"ui.selection.primary" = { bg = "gray" }
+
+"ui.cursor" = { fg = "dark_gray", bg = "yellow" }
+"ui.cursor.primary" = { fg = "dark_gray", bg = "yellow" }
+"ui.cursor.match" = "yellow"
+
