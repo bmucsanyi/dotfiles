@@ -6,7 +6,14 @@ args = ["server"]
 typeCheckingMode = "standard"
 autoImportCompletions = true
 
+[language-server.texlab.config.texlab]
+build.onSave = true
+chktex = { onOpenAndSave = true, onEdit = true }
+
 [[language]]
 name = "python"
 language-servers = ["pyright", "ruff"]
 
+[[language]]
+name = "latex"
+language-servers = ["texlab"]
