@@ -24,4 +24,3 @@ pageup = "no_op"
 pagedown = "no_op"
 home = "no_op"
 end = "no_op"
-j = {h = "normal_mode"}
