@@ -1,4 +1,19 @@
-theme = "ayu++_nobg"
+theme = "carbon_nobg"
+
+[editor]
+end-of-line-diagnostics = "hint"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.auto-save]
+after-delay.enable = true
+after-delay.timeout = 3000
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
 
 [keys.insert]
 up = "no_op"
@@ -9,4 +24,4 @@ pageup = "no_op"
 pagedown = "no_op"
 home = "no_op"
 end = "no_op"
-
+j = {h = "normal_mode"}
