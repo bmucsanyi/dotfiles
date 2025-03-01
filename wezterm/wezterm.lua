@@ -21,6 +21,11 @@ config.front_end = "WebGpu"
 -----------
 config.color_scheme = 'Tokyo Night'
 
+------------
+-- Sounds --
+------------
+config.audible_bell = "Disabled"
+
 ----------
 -- Tabs --
 ----------
@@ -201,7 +206,8 @@ config.key_tables = {
 -----------
 -- Fonts --
 -----------
-config.font = wezterm.font({ family = 'Menlo' })
+-- config.font = wezterm.font({ family = 'JetBrains Mono'})
+config.font = wezterm.font({ family = 'IBM Plex Mono' })
 config.font_size = 13
 
 ------------------
@@ -210,9 +216,14 @@ config.font_size = 13
 config.window_background_opacity = 0.9
 config.macos_window_background_blur = 30
 config.window_decorations = 'RESIZE'
+-- config.window_frame = {
+--   font = wezterm.font({ family = 'JetBrains Mono', weight = 'Bold' }),
+--   font_size = 11,
+-- }
 config.window_frame = {
-  font = wezterm.font({ family = 'Menlo', weight = 'Bold' }),
+  font = wezterm.font({ family = 'IBM Plex Mono', weight = 'Bold' }),
   font_size = 11,
 }
+config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 
 return config
