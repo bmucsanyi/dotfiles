@@ -50,4 +50,4 @@ alias ls="eza --icons=never"
 
 # Add SSH and SSHFS aliases
 alias ssh_mlcloud="ssh -i ~/.ssh/slurm_tue owl569@134.2.168.43 -p 2221"
-alias sshfs_mlcloud="umount -f ~/mnt/mlcloud &> /dev/null || sshfs -p 2221 -o IdentityFile=~/.ssh/slurm_tue owl569@134.2.168.114:/mnt/lustre/work/hennig/owl569 ~/mnt/mlcloud"
+alias sshfs_mlcloud="umount -f ~/mnt/mlcloud &> /dev/null; sshfs -p 2221 -o IdentityFile=~/.ssh/slurm_tue owl569@134.2.168.114:/mnt/lustre/work/hennig/owl569 ~/mnt/mlcloud"
