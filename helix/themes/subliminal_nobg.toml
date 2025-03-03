@@ -99,10 +99,14 @@
 
 # Diagnostics
 "diagnostic" = { modifiers = ["underlined"] }
-"diagnostic.hint" = { fg = "hint", modifiers = ["underlined"] }
-"diagnostic.info" = { fg = "info", modifiers = ["underlined"] }
-"diagnostic.warning" = { fg = "warning", modifiers = ["underlined"] }
-"diagnostic.error" = { fg = "error", modifiers = ["underlined"] }
+# "diagnostic.hint" = { fg = "hint", modifiers = ["underlined"] }
+# "diagnostic.info" = { fg = "info", modifiers = ["underlined"] }
+# "diagnostic.warning" = { fg = "warning", modifiers = ["underlined"] }
+# "diagnostic.error" = { fg = "error", modifiers = ["underlined"] }
+"diagnostic.hint" = { underline = { color = "hint", style="curl"} }
+"diagnostic.info"= { underline = { color = "info", style="curl"} }
+"diagnostic.warning"= { underline = { color = "warning", style="curl"} }
+"diagnostic.error"= { underline = { color = "error", style="curl"} }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
 

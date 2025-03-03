@@ -1,4 +1,4 @@
-theme = "carbon_nobg"
+theme = "subliminal_nobg"
 
 [editor]
 end-of-line-diagnostics = "hint"
@@ -10,7 +10,7 @@ select = "underline"
 
 [editor.auto-save]
 after-delay.enable = true
-after-delay.timeout = 3000
+after-delay.timeout = 1000
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
