@@ -62,10 +62,19 @@ wezterm.on(
 -- Status bar --
 ----------------
 local function segments_for_right_status(window)
+  for _, b in ipairs(wezterm.battery_info()) do
+    battery_str = '🔋' .. string.format('%.0f%%', b.state_of_charge * 100)
+  end
+
+  hostname_str = '💻 ' .. wezterm.hostname()
+  time_str = '📅 ' .. wezterm.strftime('%a %b %-d %H:%M')
+  workspace_str = '🏢 ' .. window:active_workspace()
+
   return {
-    window:active_workspace(),
-    wezterm.strftime('%a %b %-d %H:%M'),
-    wezterm.hostname(),
+    workspace_str,
+    time_str,
+    hostname_str,
+    battery_str,
   }
 end
 
@@ -86,7 +95,7 @@ wezterm.on('update-status', function(window, _)
       orientation = 'Horizontal',
       colors = { gradient_from, gradient_to },
     },
-    #segments -- only gives us as many colours as we have segments.
+    #segments -- Only gives us as many colours as we have segments.
   )
 
   -- We'll build up the elements to send to wezterm.format in this table.
@@ -222,7 +231,8 @@ config.font_size = 13
 ------------------
 -- Window style --
 ------------------
-config.window_background_opacity = 0.9
+-- config.window_background_opacity = 0.8
+config.window_background_opacity = 0.85
 config.macos_window_background_blur = 30
 config.window_decorations = 'RESIZE'
 -- config.window_frame = {
