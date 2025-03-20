@@ -7,7 +7,6 @@ local function project_dirs()
   local projects = { wezterm.home_dir }
 
   for _, dir in ipairs(wezterm.glob(project_dir .. '/*')) do
-    -- ... and add them to the projects table.
     table.insert(projects, dir)
   end
 
@@ -25,8 +24,6 @@ function module.choose_project()
     choices = choices,
     fuzzy = true,
     action = wezterm.action_callback(function(child_window, child_pane, id, label)
-      -- "label" may be empty if nothing was selected. Don't bother doing anything
-      -- when that happens.
       if not label then return end
 
       -- The SwitchToWorkspace action will switch us to a workspace if it already exists,
@@ -35,7 +32,7 @@ function module.choose_project()
         -- We'll give our new workspace a nice name, like the last path segment
         -- of the directory we're opening up.
         name = label:match("([^/]+)$"),
-        -- Here's the meat. We'll spawn a new terminal with the current working
+        -- We'll spawn a new terminal with the current working
         -- directory set to the directory that was picked.
         spawn = { cwd = label },
       }, child_pane)
