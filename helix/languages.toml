@@ -2,6 +2,10 @@
 command = "ruff"
 args = ["server"]
 
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]
+
 [language-server.pyright.config.python.analysis]
 typeCheckingMode = "standard"
 autoImportCompletions = true
@@ -12,7 +16,7 @@ chktex = { onOpenAndSave = true, onEdit = true }
 
 [[language]]
 name = "python"
-language-servers = ["pyright", "ruff"]
+language-servers = ["pyright", "ruff", "harper-ls"]
 
 [[language]]
 name = "latex"
